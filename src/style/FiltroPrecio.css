@@ -1,0 +1,43 @@
+.ContainerFilter {
+  position: absolute;
+  display: flex;
+  border: 2px solid #b3b3b3;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  gap: 20px;
+  padding:16px;
+  border-radius: 18px;
+  width: 586.5px;
+  height: 36px;
+}
+
+
+.ContainerFilter p{
+    margin-left: 20px;
+color: #b3b3b3;
+width: 270px;
+
+}
+.Switch{
+height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    border-left: 1px solid #b3b3b3;
+    
+}
+.ContainerFilter .nextui-c-itiWTf-bDUxer-checked-true {
+  background: #222222;
+
+}
+
+.ContainerFilter .nextui-c-STltJ-bwQcWP-color-default {
+    --nextui--switchColor: #222222;
+    --nextui--switchColorShadow: #222222;
+    --nextui--switchColorHover: #222222;
+    }
+    .nextui-c-jjKPqy + .nextui-c-itiWTf:where(.nextui-c-huiNHE) > .nextui-c-eJPKci {
+        transform: translateX(calc(var(--nextui--switchWidth) / 15));
+    }

@@ -1,0 +1,128 @@
+.ContainerNavbar {
+  width: 100%;
+display: flex;
+} 
+.Fullnavbar{
+    border-bottom: 1px solid #EBEBEB;
+    padding: 10px 31px 18px ;
+    box-shadow: none;
+
+}
+.Navbar{
+   position: fixed;
+   border-bottom: #EBEBEB 1px solid;
+
+}
+body{
+  padding: 0px;
+  margin: 0px 0px;
+}
+.Logo {
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  gap: 6px;
+  margin-right: 265px;
+}
+.InputNavbar {
+  padding: 0px;
+  border: 1px solid #EBEBEB;
+  border-radius: 30px;
+  margin-right: 70px;
+}
+.InputNavbar ul {
+  display: flex;
+  gap: 21px;
+  list-style: none;
+  margin: 0;
+  align-items: center;
+  padding: 9px 18px;
+ 
+}
+.Borde {
+    padding-right: 10px;
+    border-right: 1px solid #EBEBEB;
+}
+.Users{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.IconsUser{
+    display: flex;
+    gap: 8px;
+   align-items: center;
+   border: 1px #EBEBEB solid;
+   padding: 1px 4px 1px 10px;
+  background-color: #FFFFFF;
+   border-radius: 30px;
+    grid-area: 10px;
+}
+.Navbar2{
+gap: 10px;
+  width: 100%;
+ 
+   display: flex;
+   align-items: center  ;
+}
+.Navbar2 ul{
+  padding: 38px 0px 0px 43px; 
+  display: flex;
+  gap: 38px;
+  margin: 0px;
+  margin: 0px;
+}
+.Navbar2 li{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 10px;
+ font-size:14px;
+ width: 107px,!important ;
+ height: 59px;
+ border-bottom: 2px transparent solid;
+filter: grayscale(100%) invert(40%)
+
+}
+.Navbar2 li:hover{
+  border-bottom: 2px #EBEBEB solid; 
+  filter:grayscale(100%);
+color: black;
+cursor: pointer;
+filter: grayscale(0%);
+}
+.Navbar2 li:active{
+  border-bottom: 2px solid black;
+}
+.Navbar2 span{
+  height: 16px;
+
+}
+.ButtonRight{
+width: 28px;
+height: 28px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: 1px #EBEBEB solid ;
+}
+.ButtonRight svg{
+font-size: 19px;
+}
+.ButtonRight2{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 13px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  border: 1px #EBEBEB solid ;
+  height: 49px;
+
+}
+.BotonesNavbar{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+ margin-top: 19px;
+
+}
