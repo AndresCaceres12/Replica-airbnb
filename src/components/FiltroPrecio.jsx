@@ -4,15 +4,15 @@ import { Switch } from "@nextui-org/react";
 import CheckIcon from "@mui/icons-material/Check";
 
 
-const FiltroPrecio = () => {
+const FiltroPrecio = ({title,body}) => {
 
   return (
     <div >
     <div className="ContainerFilter">
-      <b>Mostrar el Precio total</b>
+      <b>{title}</b>
 
       <div className="Switch">
-      <p>Incluidas todas las tarifas, pero sin contar los impuestos</p>
+      <p>{body}</p>
       
       <span>
       <Switch

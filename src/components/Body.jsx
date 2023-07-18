@@ -5,11 +5,15 @@ import StarIcon from "@mui/icons-material/Star";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { DataInfo } from "../data/DataPrincipal";
+// import { DataInfo } from "../data/DataPrincipal";
 import Checkbox from '@mui/material/Checkbox';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import Favorite from '@mui/icons-material/Favorite';
-
+import { useTranslation } from 'react-i18next';
+import i18n from "../config/i18next";
+import { DataInfoEn } from "../../public/en/DataPrincipal";
+import { DataInfoEs } from "../../public/es/DataPrincipal-es";
+import IdiomasModal from "./IdiomasModal";
 const Body = () => {
   const settings = {
     dots: true,
@@ -18,6 +22,11 @@ const Body = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+  const { t, } = useTranslation();
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+  const DataInfo = i18n.language === "en" ? DataInfoEn : DataInfoEs;
   const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
   return (
     <div className="contenedor">
@@ -61,8 +70,8 @@ const Body = () => {
                   <StarIcon style={{ fontSize: "14px" }} /> {item.rating}
                 </span>
               </div>
-              <p>{item.distancia}</p>
-              <p>{item.tiempo} </p>
+              <p>{t(item.distancia)}</p>
+            <p>{t(item.tiempo)}</p>
               <p>
                 <b>{item.precio} COP </b>noche
               </p>
@@ -70,8 +79,9 @@ const Body = () => {
           </div>
         ))}
       </div>
-      
-     
+      <button onClick={() => changeLanguage('es')}>Cambiar a español</button>
+      <button onClick={() => changeLanguage('en')}>Change to English</button>
+   
     </div>
   );
 };

@@ -8,7 +8,8 @@ import { InfoNavbar } from "../data/InfoNavbar";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import Filtro from "../Imagenes/filtro.png"
 import { Search } from "@mui/icons-material";
-const NavbarAir = () => {
+import IdiomasModal from "./IdiomasModal";
+const NavbarAir = ({setVisible,bindings}) => {
   const [isHover, setIsHover] = useState(false);
 
   useEffect(() => {
@@ -45,8 +46,8 @@ const NavbarAir = () => {
           </div>
           <div className="Users">
             <span>Pon tu espacio en Airbnb</span>
-            <div className="rejilla">
-               <img src={rejilla} alt="" srcset="" style={{ maxWidth: "17px" }} />
+            <div className="rejilla" onClick={() => setVisible(true)}>
+               <img src={rejilla} alt="" srcset="" style={{ maxWidth: "17px" }}    />
             </div>
            
             <button className="IconsUser">
@@ -84,6 +85,7 @@ const NavbarAir = () => {
           </div>
         </div>
       </div>
+      <IdiomasModal bindings={bindings} setVisible={setVisible}/>
     </div>
   );
 };
