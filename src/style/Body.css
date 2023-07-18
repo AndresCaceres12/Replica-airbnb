@@ -1,6 +1,4 @@
-/* styles.css */
 
-/* Estilos para las flechas de navegación */
 .slick-prev,
 .slick-next {
   font-size: 0;
@@ -35,7 +33,7 @@
 }
 
 /* Estilos para los puntos indicadores */
-.slick-dots {
+/* .slick-dots {
   list-style: none;
   display: flex !important;
   justify-content: center;
@@ -45,9 +43,9 @@
 
 .slick-dots li {
   margin: 0 4px;
-}
+} */
 
-.slick-dots li button {
+/* .slick-dots li button {
   font-size: 0;
   line-height: 0;
   display: block;
@@ -63,4 +61,33 @@
 .slick-dots li.slick-active button {
   background: #333;
   border-color: #333;
+} */
+.SliderContenedor{
+  margin-top: 250px;
+
+  height: 200px;
+}
+.contenedor{
+  padding: 340px 35px;
+}
+
+
+.slick-arrow.slick-next{
+  position: absolute;
+  right: 20px;
+}.slick-arrow.slick-prev{
+  position: absolute;
+  left: 20px;
+}
+
+.card-body p{
+margin: 0;
+}
+.card-body{
+  margin-bottom: 28px;
+}
+.CorazonIcon{
+  position: relative;
+  bottom: 265px;
+  left: 248px;
 }

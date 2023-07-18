@@ -6,12 +6,15 @@ display: flex;
     border-bottom: 1px solid #EBEBEB;
     padding: 10px 31px 18px ;
     box-shadow: none;
+   
 
 }
 .Navbar{
    position: fixed;
    border-bottom: #EBEBEB 1px solid;
-
+ z-index: 9999;
+ background-color: #FFFFFF;
+ top: 0px;
 }
 body{
   padding: 0px;
@@ -22,13 +25,15 @@ body{
   align-items: center;
   font-size: 26px;
   gap: 6px;
-  margin-right: 265px;
+  margin-right: 255px;
 }
 .InputNavbar {
   padding: 0px;
   border: 1px solid #EBEBEB;
   border-radius: 30px;
   margin-right: 70px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  font-size: 14px;
 }
 .InputNavbar ul {
   display: flex;
@@ -39,14 +44,68 @@ body{
   padding: 9px 18px;
  
 }
+.InputNavbar:hover{
+  cursor: pointer;
+}
+.Search {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #FF385C;
+  border-radius: 50%; 
+  background-color: #FF385C;
+}
+
+.InputNavbar svg {
+  font-size: 19px;
+  color: #FFFFFF;
+  height: 25px;
+}
+
 .Borde {
     padding-right: 10px;
     border-right: 1px solid #EBEBEB;
+    color: black;
+}
+.Cuantos{
+  color: #afafaf;
 }
 .Users{
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
+}
+.Users span{
+  font-size: 14px;
+  border: 2px transparent solid;
+  padding: 8px;
+  border-radius: 30px
+}
+.Users span:hover{
+  background-color: #F7F7F7;
+  cursor: pointer;
+}
+.rejilla{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  border-radius: 50%; 
+ 
+}
+.Users img{
+  
+ 
+  padding: px;
+  border-radius: 30px
+}
+.rejilla:hover{
+  background-color: #F7F7F7;
+  cursor: pointer;
 }
 .IconsUser{
     display: flex;
@@ -77,7 +136,7 @@ gap: 10px;
  flex-direction: column;
  align-items: center;
  gap: 10px;
- font-size:14px;
+ font-size:12px;
  width: 107px,!important ;
  height: 59px;
  border-bottom: 2px transparent solid;
@@ -86,7 +145,6 @@ filter: grayscale(100%) invert(40%)
 }
 .Navbar2 li:hover{
   border-bottom: 2px #EBEBEB solid; 
-  filter:grayscale(100%);
 color: black;
 cursor: pointer;
 filter: grayscale(0%);
@@ -125,4 +183,7 @@ font-size: 19px;
   align-items: center;
  margin-top: 19px;
 
+}
+.IconsUser:hover{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }

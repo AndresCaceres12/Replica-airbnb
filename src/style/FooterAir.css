@@ -1,0 +1,21 @@
+
+.FullFooter{
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 93%;
+  border-top:1px solid #B3B3B3;
+  background-color: white;
+ 
+}
+.Footer1{
+    display: flex;
+    gap: 20px;
+    padding: 9px 20px;
+}
+.Footer1 li{
+  list-style: none;
+   font-size: 15px;
+}

@@ -1,31 +1,33 @@
 .ContainerFilter {
   position: absolute;
   display: flex;
-  border: 2px solid #b3b3b3;
+  border: 2px solid #e4e2e2;
   top: 37%;
   left: 50%;
   transform: translate(-50%, -50%);
   align-items: center;
   gap: 20px;
-  padding:16px;
+  padding:10px;
   border-radius: 18px;
-  width: 586.5px;
-  height: 36px;
+  width: 670px;
+  
 }
 
 
 .ContainerFilter p{
     margin-left: 20px;
+    font-size: 16px;
 color: #b3b3b3;
-width: 270px;
+width: 290px;
+height: 80%;
 
 }
 .Switch{
 height: 48px;
     display: flex;
     align-items: center;
-    gap: 40px;
-    border-left: 1px solid #b3b3b3;
+    gap: 70px;
+    border-left: 1px solid #DDDDDD;
     
 }
 .ContainerFilter .nextui-c-itiWTf-bDUxer-checked-true {

@@ -7,6 +7,7 @@ import CheckIcon from "@mui/icons-material/Check";
 const FiltroPrecio = () => {
 
   return (
+    <div >
     <div className="ContainerFilter">
       <b>Mostrar el Precio total</b>
 
@@ -24,8 +25,11 @@ const FiltroPrecio = () => {
       </span>
 
       </div>
-
+     
+    </div> 
+   
     </div>
+    
   );
 };
 

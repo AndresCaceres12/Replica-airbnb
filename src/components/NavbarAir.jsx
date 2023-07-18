@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import "../style/NavbarAir.css";
 import Logo from "../Imagenes/airbnbImg-removebg-preview.png";
 import rejilla from "../Imagenes/rejilla.png";
-import { SearchOutlined } from "@mui/icons-material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import MenuIcon from "@mui/icons-material/Menu";
 import { InfoNavbar } from "../data/InfoNavbar";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import Filtro from "../Imagenes/filtro.png"
+import { Search } from "@mui/icons-material";
 const NavbarAir = () => {
   const [isHover, setIsHover] = useState(false);
 
@@ -37,15 +37,18 @@ const NavbarAir = () => {
               <li className="Borde">En cualquier lugar del mundo</li>
               <li className="Borde">Cualquier semana</li>
               <li className="Cuantos">¿Cuántos?</li>
-              <li>
-                {" "}
-                <SearchOutlined color="disabled" />
+              <li className="Search">
+                
+                <Search/>
               </li>
             </ul>
           </div>
           <div className="Users">
             <span>Pon tu espacio en Airbnb</span>
-            <img src={rejilla} alt="" srcset="" style={{ maxWidth: "17px" }} />
+            <div className="rejilla">
+               <img src={rejilla} alt="" srcset="" style={{ maxWidth: "17px" }} />
+            </div>
+           
             <button className="IconsUser">
               <MenuIcon fontSize="inherit" />
               <AccountCircleIcon color="action" fontSize="large" />

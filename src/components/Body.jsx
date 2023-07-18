@@ -1,11 +1,14 @@
-import React from 'react';
-import Slider from 'react-slick';
-import '../style/Body.css';
+import React from "react";
+import Slider from "react-slick";
+import "../style/Body.css";
 import StarIcon from "@mui/icons-material/Star";
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
-import { DataInfo } from '../data/DataPrincipal';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { DataInfo } from "../data/DataPrincipal";
+import Checkbox from '@mui/material/Checkbox';
+import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
+import Favorite from '@mui/icons-material/Favorite';
 
 const Body = () => {
   const settings = {
@@ -13,31 +16,62 @@ const Body = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
   };
-
+  const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
   return (
-    <div>
-      {DataInfo.map((item, index) => (
-        <div key={index}>
-          <h2>Imágenes</h2>
-          <Slider {...settings}>
-            {item.imagenes.map((image, i) => (
-              <div key={i}>
-                <img src={image} alt={`Imagen ${i + 1}`} style={{ maxWidth: "200px" }} />
+    <div className="contenedor">
+      <div className="row">
+        {DataInfo.map((item, index) => (
+          <div key={index} className="col-3">
+            <Slider {...settings}>
+              {item.imagenes.map((image, i) => (
+                <div key={i} className="ContenedorImg">
+                  <img
+                    src={image}
+                    alt={`Imagen ${i + 1}`}
+                    style={{
+                      borderRadius: 19 / 2,
+                      minWidth: "300px",
+                      maxWidth: "300px",
+                      maxHeight: "270px",
+                      minHeight: "270px",
+                      zIndex: "999 ",
+                    }}
+                  /><Checkbox className="CorazonIcon"
+                  {...label}
+               style={{color:"white"}}
+                    icon={<FavoriteBorder />}
+                    checkedIcon={<Favorite />}
+                  />
+                </div>
+              ))}
+            </Slider>
+            <div className="card-body">
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <b>{item.ubicacion}</b>
+
+                <span>
+                  <StarIcon style={{ fontSize: "14px" }} /> {item.rating}
+                </span>
               </div>
-            ))}
-          </Slider>
-          <p>Ubicación: {item.ubicacion}</p>
-          <p>Distancia: {item.distancia}</p>
-          <p>Tiempo: {item.tiempo}</p>
-          <p>Precio: {item.precio}</p>
-          <div>
-            <StarIcon style={{ color: "#FFD700" }} />
-            <span>Rating: {item.rating}</span>
+              <p>{item.distancia}</p>
+              <p>{item.tiempo} </p>
+              <p>
+                <b>{item.precio} COP </b>noche
+              </p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+      
+     
     </div>
   );
 };
