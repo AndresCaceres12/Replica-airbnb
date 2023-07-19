@@ -1,11 +1,11 @@
 import React from "react";
 import Slider from "react-slick";
 import "../style/ContendCards.css";
+import { Carousel } from 'react-responsive-carousel';
 import StarIcon from "@mui/icons-material/Star";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import { DataInfo } from "../data/DataPrincipal";
 import Checkbox from '@mui/material/Checkbox';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import Favorite from '@mui/icons-material/Favorite';
@@ -33,8 +33,8 @@ const ContendCards = () => {
             <Slider {...settings}>
               {item.imagenes.map((image, i) => (
                 <div key={i} className="ContenedorImg">
-                  <img
-                    src={image}
+                  <img 
+                          src={image}
                     alt={`Imagen ${i + 1}`}
                     style={{
                       borderRadius: 19 / 2,
@@ -42,6 +42,7 @@ const ContendCards = () => {
                       maxWidth: "300px",
                       maxHeight: "270px",
                       minHeight: "270px",
+                    
                      
                     }}
                   /><Checkbox className="CorazonIcon"

@@ -1,0 +1,79 @@
+
+.modal-overlay {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5); 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
+
+.modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px 10px 0 0; 
+  background-color: #fff;
+  box-shadow: 0px -4px 16px rgba(0, 0, 0, 0.15); 
+  animation: slide-up 0.5s ease; 
+}
+
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px -4px 16px rgba(0, 0, 0, 0.15);
+}
+.modal-header {
+  padding: 6px 20px;
+  display: flex;
+}
+.close-button {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+
+.modal-body {
+  padding: 1px 90px 60px 40px;
+  font-size:16px;
+}
+.modal-body ul{
+list-style: none;
+font-size: 15px;
+width: 110%;
+}
+.modal-body li{
+    padding: 6px;
+    color: #525252;
+}
+.modal-body p{
+    color: #262626;
+   padding: 0px 30px;
+    }
+    

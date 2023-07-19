@@ -1,5 +1,4 @@
 import Principal from "./pages/Principal";
-
 import { LanguageProvider } from "./components/useProvider";
 function App() {
   
@@ -7,6 +6,7 @@ function App() {
     <>
     <LanguageProvider>
        <Principal />
+  
     </LanguageProvider>
    
 

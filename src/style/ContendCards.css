@@ -1,4 +1,3 @@
-
 .slick-prev,
 .slick-next {
   font-size: 0;
@@ -62,32 +61,128 @@
   background: #333;
   border-color: #333;
 } */
-.SliderContenedor{
+.SliderContenedor {
   margin-top: 250px;
 
   height: 200px;
 }
-.contenedor{
-  padding: 340px 35px;
+.contenedor {
+  padding: 340px 35px 80px;
 }
 
-
-.slick-arrow.slick-next{
+.slick-arrow.slick-next {
   position: absolute;
   right: 20px;
-}.slick-arrow.slick-prev{
+}
+.slick-arrow.slick-prev {
   position: absolute;
   left: 20px;
 }
 
-.card-body p{
-margin: 0;
+.card-body p {
+  margin: 0;
 }
-.card-body{
+.card-body {
   margin-bottom: 28px;
 }
-.CorazonIcon{
+.CorazonIcon {
   position: relative;
   bottom: 265px;
   left: 248px;
+}
+/* Ajusta el estilo de los dots */
+/* Ajusta el estilo de los dots */
+.slick-dots {
+  margin-bottom: 70px !important;
+  padding: 0; 
+ 
+}
+.slick-dots li button:before {
+  font-size: 7px !important; 
+  color: white !important;
+}
+.slick-dots button{
+  margin: 0px !important;
+  padding: 2px !important;
+}
+
+.slick-dots li button {
+  font-size: 0 !important;
+  line-height: 0 !important;
+  display: flex !important;
+
+  width: 1px !important;
+  height: 0px !important;
+ 
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.slick-dots li {
+  margin: 0 0px !important; 
+  height: 20px !important; 
+}
+
+.slick-dots button {
+  width: 18px !important;
+  height: 18px !important; 
+  
+}
+
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 10px !important;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+.custom-next-arrow,
+.custom-prev-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 24px;
+  color: black;
+  z-index: 2;
+}
+.custom-prev-arrow{
+  position: absolute;
+  top: 35%;
+}
+.custom-next-arrow{
+  position: absolute;
+  top: 35%;
+  left: 85%;
+}
+.custom-next-arrow:hover,
+.custom-prev-arrow:hover {
+  background-color: gray;
+}
+.custom-next-arrow,
+.custom-prev-arrow {
+  /* Estilos comunes para las flechas, como en el ejemplo anterior */
+  /* ... */color: red;
+}
+
+.custom-next-arrow.hidden,
+.custom-prev-arrow.hidden {
+  display: none; /* Oculta las flechas cuando no se muestre el cursor sobre la imagen */
+}
+
+.custom-next-arrow.visible,
+.custom-prev-arrow.visible {
+  /* Estilos para mostrar las flechas cuando el cursor está sobre la imagen */
+ color: black; /* ... */
 }

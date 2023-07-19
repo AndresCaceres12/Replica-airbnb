@@ -5,7 +5,7 @@ import "../style/IdiomasModal.css";
 import { useLanguage } from "./useProvider";
 
 const IdiomasModal = () => {
-  const { changeLanguage, setVisible, bindings } = useLanguage();
+  const { changeLanguage, setVisible1, bindings1 } = useLanguage();
  
   return (
     <div>
@@ -14,10 +14,10 @@ const IdiomasModal = () => {
         fullScreen
         aria-labelledby="modal-title"
         aria-describedby="modal-description"
-        {...bindings}
+        {...bindings1}
       >
         {" "}
-        <span className="CerrarModal" onClick={() => setVisible(false)}>
+        <span className="CerrarModal" onClick={() => setVisible1(false)}>
           X
         </span>
         <Modal.Body>
