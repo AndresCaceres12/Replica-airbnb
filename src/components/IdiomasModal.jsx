@@ -2,7 +2,11 @@ import { Modal,Text } from "@nextui-org/react";
 import { Switch } from "@nextui-org/react";
 import CheckIcon from "@mui/icons-material/Check";
 import "../style/IdiomasModal.css";
-const IdiomasModal = ({ bindings ,setVisible}) => {
+import { useLanguage } from "./useProvider";
+
+const IdiomasModal = () => {
+  const { changeLanguage, setVisible, bindings } = useLanguage();
+ 
   return (
     <div>
       <Modal
@@ -54,11 +58,11 @@ const IdiomasModal = ({ bindings ,setVisible}) => {
               </span>
               <h5>Elige un idioma y una región</h5>
               <span style={{ display: "flex" }}>
-                <ul>
+                <ul onClick={()=>{changeLanguage("es")}}>
                   <li>Español</li>
                   <li style={{ color: "grey" }}>España</li>
                 </ul>
-                <ul>
+                <ul  onClick={()=>{changeLanguage("en")}}>
                   <li>English</li>
                   <li style={{ color: "grey" }}>United States</li>
                 </ul>

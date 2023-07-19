@@ -9,9 +9,10 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import Filtro from "../Imagenes/filtro.png"
 import { Search } from "@mui/icons-material";
 import IdiomasModal from "./IdiomasModal";
-const NavbarAir = ({setVisible,bindings}) => {
+import { useLanguage } from "./useProvider";
+const NavbarAir = () => {
   const [isHover, setIsHover] = useState(false);
-
+  const { setVisible, bindings } = useLanguage();
   useEffect(() => {
     const handleMouseEnter = () => {
       setIsHover(true);
@@ -85,7 +86,7 @@ const NavbarAir = ({setVisible,bindings}) => {
           </div>
         </div>
       </div>
-      <IdiomasModal bindings={bindings} setVisible={setVisible}/>
+      <IdiomasModal />
     </div>
   );
 };

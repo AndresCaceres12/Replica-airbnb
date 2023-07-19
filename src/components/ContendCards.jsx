@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import "../style/Body.css";
+import "../style/ContendCards.css";
 import StarIcon from "@mui/icons-material/Star";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -12,9 +12,8 @@ import Favorite from '@mui/icons-material/Favorite';
 import { useTranslation } from 'react-i18next';
 import i18n from "../config/i18next";
 import { DataInfoEn } from "../../public/en/DataPrincipal";
-import { DataInfoEs } from "../../public/es/DataPrincipal-es";
-import IdiomasModal from "./IdiomasModal";
-const Body = () => {
+import { DataInfoEs } from "../../public/es/DataPrincipal";
+const ContendCards = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -23,9 +22,7 @@ const Body = () => {
     slidesToScroll: 1,
   };
   const { t, } = useTranslation();
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
+
   const DataInfo = i18n.language === "en" ? DataInfoEn : DataInfoEs;
   const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
   return (
@@ -45,7 +42,7 @@ const Body = () => {
                       maxWidth: "300px",
                       maxHeight: "270px",
                       minHeight: "270px",
-                      zIndex: "999 ",
+                     
                     }}
                   /><Checkbox className="CorazonIcon"
                   {...label}
@@ -79,11 +76,8 @@ const Body = () => {
           </div>
         ))}
       </div>
-      <button onClick={() => changeLanguage('es')}>Cambiar a español</button>
-      <button onClick={() => changeLanguage('en')}>Change to English</button>
-   
     </div>
   );
 };
 
-export default Body;
+export default ContendCards;

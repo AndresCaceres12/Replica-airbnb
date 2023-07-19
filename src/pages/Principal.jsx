@@ -1,17 +1,19 @@
 import React from 'react'
-import {useModal} from "@nextui-org/react";
+
 import NavbarAir from '../components/NavbarAir'
 import FiltroPrecio from '../components/FiltroPrecio'
-import Body from '../components/Body'
+import ContendCards from '../components/ContendCards'
 import FooterAir from '../components/FooterAir'
+import { MyComponent } from '../components/Prueba'
 const Principal = () => {
-  const { setVisible, bindings } = useModal();
+
   return (
     <div>
-        <NavbarAir setVisible={setVisible} bindings={bindings}/>
+        <NavbarAir />
         <FiltroPrecio title="Mostrar el Precio total" body="Incluidas todas las tarifas, pero sin contar los impuestos"/>
-       <Body />
+       <ContendCards />
        <FooterAir/>
+       <MyComponent/>
     </div>
   )
 }
