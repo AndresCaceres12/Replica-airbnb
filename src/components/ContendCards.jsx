@@ -45,15 +45,15 @@ const ContendCards = () => {
                     
                      
                     }}
-                  /><Checkbox className="CorazonIcon"
+                  />
+                </div>
+              ))}
+            </Slider><Checkbox className="CorazonIcon"
                   {...label}
                style={{color:"white"}}
                     icon={<FavoriteBorder />}
                     checkedIcon={<Favorite />}
                   />
-                </div>
-              ))}
-            </Slider>
             <div className="card-body">
               <div
                 style={{

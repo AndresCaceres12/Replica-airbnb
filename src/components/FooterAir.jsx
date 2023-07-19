@@ -20,11 +20,11 @@ function FooterAir() {
     <>
       <div className="FullFooter">
         <ul className="Footer1">
-          <li>© 2023 Airbnb, Inc.</li>
-          <li>· Privacidad·</li>
-          <li>Términos</li>
-          <li>· Mapa del sitio·</li>
-          <li>Datos de la empresa</li>
+          <li >© 2023 Airbnb, Inc.</li>
+          <li className="Asistencia"><p>· Privacidad·</p></li>
+          <li className="Asistencia"><p>Términos</p></li>
+          <li className="Asistencia"><p>· Mapa del sitio·</p></li>
+          <li className="Asistencia" ><p>Datos de la empresa</p></li>
         </ul>
         <ul className="Footer1">
           <li>

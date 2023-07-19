@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../style/NavbarAir.css";
 import Logo from "../Imagenes/airbnbImg-removebg-preview.png";
 import rejilla from "../Imagenes/rejilla.png";
@@ -15,6 +15,7 @@ const NavbarAir = () => {
   const [isHover, setIsHover] = useState(false);
   const { setVisible1, bindings1 } = useLanguage();
   const [Login, setLogin] = useState(false);
+  const modalRef = useRef(null);
   useEffect(() => {
     const handleMouseEnter = () => {
       setIsHover(true);
@@ -29,7 +30,18 @@ const NavbarAir = () => {
       .querySelector(".Navbar2")
       .addEventListener("mouseleave", handleMouseLeave);
   }, []);
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        setLogin(false);
+      }
+    };
+    document.addEventListener("mousedown", handleOutsideClick);
 
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
   return (
     <div className="Navbar">
       <div className="Fullnavbar">
@@ -74,7 +86,7 @@ const NavbarAir = () => {
         </header>
       </div>
       {Login && (
-        <div className="ShowLogin">
+        <div className="ShowLogin" ref={modalRef}>
           <ul className="ulPrincipal">
             <li>
               <b>Regístrarse</b>
