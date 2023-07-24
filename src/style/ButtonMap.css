@@ -1,0 +1,21 @@
+.ButtonMap{
+    background-color: #222222;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px;
+    border-radius: 40px;
+    z-index: 999;
+    position: fixed;
+    top: 80%;
+    left: 44%;
+}
+.ButtonMap:hover{
+    transform: scale(1.03);
+}
+
+  .ButtonMap:active {
+    transform: scale(0.9);
+  }

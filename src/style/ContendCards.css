@@ -82,28 +82,25 @@
 .card-body p {
   margin: 0;
 }
-.card-body {
-  margin-bottom: 28px;
-}
+
 .CorazonIcon {
   position: relative;
   bottom: 265px;
   left: 248px;
 }
-/* Ajusta el estilo de los dots */
-/* Ajusta el estilo de los dots */
 .slick-dots {
-  margin-bottom: 70px !important;
-  padding: 0; 
- 
+  position: absolute !important;
+  bottom: 20px !important;
+  margin: 0px !important;
+  padding: 0;
 }
 .slick-dots li button:before {
-  font-size: 7px !important; 
+  font-size: 7px !important;
   color: white !important;
 }
-.slick-dots button{
+.slick-dots button {
   margin: 0px !important;
-  padding: 2px !important;
+  padding: 1px !important;
 }
 
 .slick-dots li button {
@@ -113,7 +110,7 @@
 
   width: 1px !important;
   height: 0px !important;
- 
+
   cursor: pointer;
   color: transparent;
   border: 0;
@@ -122,17 +119,14 @@
 }
 
 .slick-dots li {
-  margin: 0 0px !important; 
-  height: 20px !important; 
+  margin: 0 0px !important;
+  height: 0px !important;
 }
 
 .slick-dots button {
   width: 18px !important;
-  height: 18px !important; 
-  
+  height: 18px !important;
 }
-
-
 .slick-dots li {
   position: relative;
   display: inline-block;
@@ -157,32 +151,53 @@
   color: black;
   z-index: 2;
 }
-.custom-prev-arrow{
+.custom-prev-arrow {
   position: absolute;
   top: 35%;
 }
-.custom-next-arrow{
+.custom-next-arrow {
   position: absolute;
   top: 35%;
   left: 85%;
 }
-.custom-next-arrow:hover,
-.custom-prev-arrow:hover {
-  background-color: gray;
+.slick-slider .slick-arrow {
+  display: none !important;
 }
-.custom-next-arrow,
-.custom-prev-arrow {
-  /* Estilos comunes para las flechas, como en el ejemplo anterior */
-  /* ... */color: red;
+.slick-slider:hover .slick-arrow {
+  display: block !important;
+}
+.slick-prev,
+.slick-next {
+  width: 27px !important;
+  height: 27px !important;
+  background-color: #fff !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  cursor: pointer !important;
 }
 
-.custom-next-arrow.hidden,
-.custom-prev-arrow.hidden {
-  display: none; /* Oculta las flechas cuando no se muestre el cursor sobre la imagen */
+.slick-arrow.slick-next::before {
+  left: 5px !important;
+  font-family: "Material Icons";
+  content: "\e315";
+  display: flex !important;
+  justify-content: center !important;
+  color: black !important;
 }
-
-.custom-next-arrow.visible,
-.custom-prev-arrow.visible {
-  /* Estilos para mostrar las flechas cuando el cursor está sobre la imagen */
- color: black; /* ... */
+.slick-arrow.slick-prev::before {
+  left: 5px !important;
+  font-family: "Material Icons";
+  content: "\e314";
+  display: flex !important;
+  justify-content: center !important;
+  color: black;
+}
+.slick-arrow.slick-prev.slick-disabled,
+.slick-arrow.slick-next.slick-disabled{
+  display: none !important;
 }

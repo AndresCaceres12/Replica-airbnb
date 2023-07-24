@@ -12,8 +12,7 @@ i18n
     fallbackLng: 'es',
     supportedLngs: ['en', 'es'],
     backend: {
-        loadPath: "/public/{{lng}}/DataPrincipal.json", // Ajusta la ruta para que coincida con la estructura de tus archivos JSON de traducción.
-      }
+        loadPath: "/public/{{lng}}/DataPrincipal.json"}
   });
 
 export default i18n;

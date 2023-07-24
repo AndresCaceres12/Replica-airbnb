@@ -123,7 +123,7 @@ const NavbarAir = () => {
                 width={"24px"}
                 height={"20px"}
               />
-              filtrar
+              Filtros
             </button>
           </div>
         </div>
